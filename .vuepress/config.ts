@@ -4,8 +4,9 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  title: "vuepress-theme-reco",
-  description: "Just playing around",
+  base: "/vuepressreco/", // 替换为仓库名称,解决样式丢失问题；指定站点的基础路径。如果站点托管在子目录下（如 GitHub Pages），需要设置此值以避免资源加载错误。
+  title: "MuYang\'s Blog",
+  description: "欢迎来到MuYang的博客",
   bundler: viteBundler(),
   // bundler: webpackBundler(),
   theme: recoTheme({
