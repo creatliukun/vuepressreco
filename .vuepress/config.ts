@@ -14,7 +14,7 @@ export default defineUserConfig({
     authorAvatar: "/head.png",
     docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
     docsBranch: "main",
-    docsDir: "example",
+    docsDir: "vuepressreco", // 如果我们文档项目存放在工程的子目录，比如 /vuepressreco 文件夹下，我们需要设置 themeConfig.docsDir 为 /vuepressreco
     lastUpdatedText: "",
     // series 为原 sidebar
     series: {

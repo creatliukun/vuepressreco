@@ -22,28 +22,5 @@ isShowTitleInHome: true
 actionText: About
 actionLink: /views/other/about
 ---
+<!-- 博客文章请放在 /blogs 文件夹中（强制），文档系列请放在 /series 文件夹中（强制），普通文档请放在 /docs 中（不强制 -->
 
-## 快速开始
-
-**npx**
-
-```bash
-# 初始化，并选择 2.x
-npx @vuepress-reco/theme-cli init
-```
-
-**npm**
-
-```bash
-# 初始化，并选择 2.x
-npm install @vuepress-reco/theme-cli@1.0.7 -g
-theme-cli init
-```
-
-**yarn**
-
-```bash
-# 初始化，并选择 2.x
-yarn global add @vuepress-reco/theme-cli@1.0.7
-theme-cli init
-```
