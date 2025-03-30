@@ -4,8 +4,10 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+  // base: 如果是本地打包预览，不需要写base，这个base是为了在github上部署时使用的,
   base: '/vuepressreco/', // 替换为仓库名称,解决样式丢失问题；指定站点的基础路径。如果站点托管在子目录下（如 GitHub Pages），需要设置此值以避免资源加载错误。
   title: "MuYang's Blog",
+  head: [['link', { rel: 'icon', href: 'logo.png' }]],
   description: '欢迎来到MuYang的博客',
   bundler: viteBundler(),
   // bundler: webpackBundler(),
@@ -13,11 +15,28 @@ export default defineUserConfig({
     logo: '/photo.png', // logo
     author: 'MuYang', // 作者
     authorAvatar: '/dog.png', // 头像
-    docsRepo: 'https://github.com/creatliukun/vuepressreco.git',
-    docsBranch: 'main',
-    docsDir: 'vuepressreco', // 如果我们文档项目存放在工程的子目录，比如 /vuepressreco 文件夹下，我们需要设置 themeConfig.docsDir 为 /vuepressreco
-    lastUpdatedText: '',
+    // docsRepo: 'https://github.com/creatliukun/vuepressreco', // 用于生成 git 跳转地址和编辑链接。
+    // docsBranch: 'main',
+    lastUpdatedText: '最后更新时间',
+    // 设置单个密码
+    // password: '14e1b600b1fd579f47433b88e8d85291',
+    // 设置多个密码,任意密码均可访问；这里的密码是 md5 加密后的密码
+    // password: [
+    //   '14e1b600b1fd579f47433b88e8d85291', // 123456
+    //   '5795e704e9e969dd04026e4805fa4cc3', // 199482
+    // ],
+
+    // 评论组件配置；目前有问题
+    // commentConfig: {
+    //   type: 'valine',
+    //   options: {
+    //     appId: 'ErC4jf370RYUgi9GqKotv4GZ-gzGzoHsz', // leanCode账户中的 appId
+    //     appKey: 'SB7CglhmQ3ebZWmKllc89C3s', // leanCode账户中的 appKey
+    //     // hideComments: true, // 全局隐藏评论，默认 false
+    //   },
+    // },
     // series 为原 sidebar; 为每个标签配置子项目
+    // autoSetSeries: true, // 自动设置系列，但是不会有分类，分组要自己设置
     series: {
       // 文档
       '/docs/html/': [
@@ -56,15 +75,15 @@ export default defineUserConfig({
     // categories包含：前端三剑客[FrontThreeMusketeers]（html,css,js）、前端框架[FrontEndFrame](vue、react)、
     // 服务端[Server]（Node.js、ajax、axios）、模块化[Modularization]（module、git）浏览器[Brower]（brower）
     navbar: [
-      { text: '主页', link: '/' },
-      { text: '记录', link: '/categories/reco/1.html' },
-      { text: '标签', link: '/tags/tag1/1.html' },
+      { text: '主页', link: '/', icon: 'IconHome' },
+      { text: '记录', link: '/categories/reco/1.html', icon: 'IconDocument' },
+      { text: '标签', link: '/tags/tag1/1.html', icon: 'IconTag' },
       {
         text: '学习笔记',
         children: [
           { text: 'HTML', link: '/blogs/html/index' },
           { text: 'CSS', link: '/blogs/css/index' },
-          { text: 'JavaScript', link: '/blogs/javaScript/index' },
+          { text: 'JavaScript', link: '/blogs/javascript/index' },
           { text: 'Ajax', link: '/blogs/ajax/index' },
           { text: 'Brower', link: '/blogs/brower/index' },
           { text: 'Vue', link: '/blogs/vue/index' },
@@ -74,7 +93,7 @@ export default defineUserConfig({
         ],
       },
     ],
-    // 二维码弹框类型
+    // 公告二维码弹框类型
     // bulletin: {
     //   body: [
     //     {
