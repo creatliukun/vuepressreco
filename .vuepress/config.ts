@@ -36,47 +36,47 @@ export default defineUserConfig({
     //   },
     // },
     // series 为原 sidebar; 为每个标签配置子项目
-    // autoSetSeries: true, // 自动设置系列，但是不会有分类，分组要自己设置
-    series: {
-      // 文档
-      '/docs/html/': [
-        {
-          text: 'module one',
-          children: ['home', 'theme'],
-        },
-        {
-          text: 'module two',
-          children: ['api', 'plugin'],
-        },
-      ],
-      // 博客
-      '/blogs/html/': [
-        {
-          text: 'module one',
-          children: ['home', 'theme'],
-        },
-        {
-          text: 'module two',
-          children: ['api', 'plugin'],
-        },
-      ],
-      '/blogs/css/': [
-        {
-          text: 'CSS选择器、新特性',
-          children: ['2025/03290830', '2025/03290841'],
-        },
-        {
-          text: 'module two',
-          children: ['api', 'plugin'],
-        },
-      ],
-    },
+    autoSetSeries: true, // 自动设置系列，但是不会有分类，分组要自己设置
+    // series: {
+    //   // 文档
+    //   '/docs/html/': [
+    //     {
+    //       text: 'module one',
+    //       children: ['home', 'theme'],
+    //     },
+    //     {
+    //       text: 'module two',
+    //       children: ['api', 'plugin'],
+    //     },
+    //   ],
+    //   // 博客
+    //   '/blogs/html/': [
+    //     {
+    //       text: 'module one',
+    //       children: ['home', 'theme'],
+    //     },
+    //     {
+    //       text: 'module two',
+    //       children: ['api', 'plugin'],
+    //     },
+    //   ],
+    //   '/blogs/css/': [
+    //     {
+    //       text: 'CSS选择器、新特性',
+    //       children: ['2025/03290830', '2025/03290841'],
+    //     },
+    //     {
+    //       text: 'module two',
+    //       children: ['api', 'plugin'],
+    //     },
+    //   ],
+    // },
     // tags包含html、css、js、ajax、brower、vue、react、node、module、git
     // categories包含：前端三剑客[FrontThreeMusketeers]（html,css,js）、前端框架[FrontEndFrame](vue、react)、
     // 服务端[Server]（Node.js、ajax、axios）、模块化[Modularization]（module、git）浏览器[Brower]（brower）
     navbar: [
       { text: '主页', link: '/', icon: 'IconHome' },
-      { text: '记录', link: '/categories/reco/1.html', icon: 'IconDocument' },
+      { text: '分类', link: '/categories/reco/1.html', icon: 'IconDocument' },
       { text: '标签', link: '/tags/tag1/1.html', icon: 'IconTag' },
       {
         text: '学习笔记',
@@ -91,6 +91,10 @@ export default defineUserConfig({
           { text: 'Node', link: '/blogs/node/index' },
           { text: 'Module', link: '/blogs/module/index' },
         ],
+      },
+      {
+        text: '文档',
+        children: [{ text: '项目', link: '/docs/project/problem.md' }],
       },
     ],
     // 公告二维码弹框类型
