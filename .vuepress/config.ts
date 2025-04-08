@@ -77,7 +77,7 @@ export default defineUserConfig({
     navbar: [
       { text: '主页', link: '/', icon: 'IconHome' },
       { text: '分类', link: '/categories/reco/1.html', icon: 'IconDocument' },
-      { text: '标签', link: '/tags/tag1/1.html', icon: 'IconTag' },
+      { text: '标签', link: '/tags/note/1.html', icon: 'IconTag' },
       { text: '时间轴', link: '/timeline.html', icon: 'IconTime' },
       {
         text: '学习笔记',
