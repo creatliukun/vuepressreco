@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app-BfD-I2tW.js";const a={};function o(c,n){return r(),t("div")}const l=e(a,[["render",o]]),_=JSON.parse('{"path":"/categories/FrontThreeMusketeers/2.html","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,_ as data};
